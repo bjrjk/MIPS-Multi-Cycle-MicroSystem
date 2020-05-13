@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../MIPS-Multi-Cycle-MicroSystem.srcs/sources_1/new/timeCounter.v" \
+"../../../../MIPS-Multi-Cycle-MicroSystem.srcs/sim_1/new/timeCounterSIM.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
