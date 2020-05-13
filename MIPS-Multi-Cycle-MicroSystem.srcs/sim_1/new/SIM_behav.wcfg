@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="SIM_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="SIM" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="50000fs"></ZoomStartTime>
+      <ZoomEndTime time="78951fs"></ZoomEndTime>
+      <Cursor1Time time="66000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="222"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="52" />
+   <wvobject fp_name="/SIM/insMIPS/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/PC_addr" type="array">
+      <obj_property name="ElementShortName">PC_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/NAFL_nextAddr" type="array">
+      <obj_property name="ElementShortName">NAFL_nextAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NAFL_nextAddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Controller_PCEn" type="logic">
+      <obj_property name="ElementShortName">Controller_PCEn</obj_property>
+      <obj_property name="ObjectShortName">Controller_PCEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/ALU_zero" type="logic">
+      <obj_property name="ElementShortName">ALU_zero</obj_property>
+      <obj_property name="ObjectShortName">ALU_zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Decoder_DecInstBus" type="array">
+      <obj_property name="ElementShortName">Decoder_DecInstBus[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Decoder_DecInstBus[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Decoder_imm" type="array">
+      <obj_property name="ElementShortName">Decoder_imm[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Decoder_imm[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Decoder_tgtAddr" type="array">
+      <obj_property name="ElementShortName">Decoder_tgtAddr[25:0]</obj_property>
+      <obj_property name="ObjectShortName">Decoder_tgtAddr[25:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/NAFL_nextInstAddr" type="array">
+      <obj_property name="ElementShortName">NAFL_nextInstAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NAFL_nextInstAddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/GPR_RdData1" type="array">
+      <obj_property name="ElementShortName">GPR_RdData1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">GPR_RdData1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insIM/index" type="array">
+      <obj_property name="ElementShortName">index[9:0]</obj_property>
+      <obj_property name="ObjectShortName">index[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/IM_Inst" type="array">
+      <obj_property name="ElementShortName">IM_Inst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IM_Inst[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Controller_IMEn" type="logic">
+      <obj_property name="ElementShortName">Controller_IMEn</obj_property>
+      <obj_property name="ObjectShortName">Controller_IMEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Decoder_rs" type="array">
+      <obj_property name="ElementShortName">Decoder_rs[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Decoder_rs[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Decoder_rt" type="array">
+      <obj_property name="ElementShortName">Decoder_rt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Decoder_rt[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Decoder_rd" type="array">
+      <obj_property name="ElementShortName">Decoder_rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Decoder_rd[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Decoder_shamt" type="array">
+      <obj_property name="ElementShortName">Decoder_shamt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Decoder_shamt[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Controller_RegWrEn" type="logic">
+      <obj_property name="ElementShortName">Controller_RegWrEn</obj_property>
+      <obj_property name="ObjectShortName">Controller_RegWrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Controller_RegOFWrEn" type="logic">
+      <obj_property name="ElementShortName">Controller_RegOFWrEn</obj_property>
+      <obj_property name="ObjectShortName">Controller_RegOFWrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Controller_MemWrEn" type="logic">
+      <obj_property name="ElementShortName">Controller_MemWrEn</obj_property>
+      <obj_property name="ObjectShortName">Controller_MemWrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Controller_ALUCtl" type="array">
+      <obj_property name="ElementShortName">Controller_ALUCtl[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Controller_ALUCtl[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Controller_RegWrDstCtl" type="array">
+      <obj_property name="ElementShortName">Controller_RegWrDstCtl[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Controller_RegWrDstCtl[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Controller_WrBackCtl" type="array">
+      <obj_property name="ElementShortName">Controller_WrBackCtl[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Controller_WrBackCtl[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Controller_ALUSrcCtl" type="logic">
+      <obj_property name="ElementShortName">Controller_ALUSrcCtl</obj_property>
+      <obj_property name="ObjectShortName">Controller_ALUSrcCtl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Controller_ExtCtl" type="logic">
+      <obj_property name="ElementShortName">Controller_ExtCtl</obj_property>
+      <obj_property name="ObjectShortName">Controller_ExtCtl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Controller_DataSizeCtl" type="logic">
+      <obj_property name="ElementShortName">Controller_DataSizeCtl</obj_property>
+      <obj_property name="ObjectShortName">Controller_DataSizeCtl</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/GPR_WrAddr_MUX_out" type="array">
+      <obj_property name="ElementShortName">GPR_WrAddr_MUX_out[4:0]</obj_property>
+      <obj_property name="ObjectShortName">GPR_WrAddr_MUX_out[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/GPR_WrData_MUX_out" type="array">
+      <obj_property name="ElementShortName">GPR_WrData_MUX_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">GPR_WrData_MUX_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/ALUOut_out" type="array">
+      <obj_property name="ElementShortName">ALUOut_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUOut_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/DMReg_out" type="array">
+      <obj_property name="ElementShortName">DMReg_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DMReg_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/GPR_RdData2" type="array">
+      <obj_property name="ElementShortName">GPR_RdData2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">GPR_RdData2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/ALU_OF" type="logic">
+      <obj_property name="ElementShortName">ALU_OF</obj_property>
+      <obj_property name="ObjectShortName">ALU_OF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/Ext_ExtImm" type="array">
+      <obj_property name="ElementShortName">Ext_ExtImm[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Ext_ExtImm[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/ALUSrc_MUX_out" type="array">
+      <obj_property name="ElementShortName">ALUSrc_MUX_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUSrc_MUX_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/A_out" type="array">
+      <obj_property name="ElementShortName">A_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/B_out" type="array">
+      <obj_property name="ElementShortName">B_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/ALU_C" type="array">
+      <obj_property name="ElementShortName">ALU_C[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_C[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/DM_dout" type="array">
+      <obj_property name="ElementShortName">DM_dout[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DM_dout[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insGPR/regArr" type="array">
+      <obj_property name="ElementShortName">regArr[31:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">regArr[31:0][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insDM/dm" type="array">
+      <obj_property name="ElementShortName">dm[1023:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">dm[1023:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insIM/im" type="array">
+      <obj_property name="ElementShortName">im[1023:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">im[1023:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insController/PCEnReg" type="logic">
+      <obj_property name="ElementShortName">PCEnReg</obj_property>
+      <obj_property name="ObjectShortName">PCEnReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insController/IMEnReg" type="logic">
+      <obj_property name="ElementShortName">IMEnReg</obj_property>
+      <obj_property name="ObjectShortName">IMEnReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insController/RegWrEnReg" type="logic">
+      <obj_property name="ElementShortName">RegWrEnReg</obj_property>
+      <obj_property name="ObjectShortName">RegWrEnReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insController/RegOFWrEnReg" type="logic">
+      <obj_property name="ElementShortName">RegOFWrEnReg</obj_property>
+      <obj_property name="ObjectShortName">RegOFWrEnReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insController/MemWrEnReg" type="logic">
+      <obj_property name="ElementShortName">MemWrEnReg</obj_property>
+      <obj_property name="ObjectShortName">MemWrEnReg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insController/StageIF" type="logic">
+      <obj_property name="ElementShortName">StageIF</obj_property>
+      <obj_property name="ObjectShortName">StageIF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insController/StageDCDRF" type="logic">
+      <obj_property name="ElementShortName">StageDCDRF</obj_property>
+      <obj_property name="ObjectShortName">StageDCDRF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insController/StageEXE" type="logic">
+      <obj_property name="ElementShortName">StageEXE</obj_property>
+      <obj_property name="ObjectShortName">StageEXE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insController/StageMEM" type="logic">
+      <obj_property name="ElementShortName">StageMEM</obj_property>
+      <obj_property name="ObjectShortName">StageMEM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insMIPS/insController/StageWB" type="logic">
+      <obj_property name="ElementShortName">StageWB</obj_property>
+      <obj_property name="ObjectShortName">StageWB</obj_property>
+   </wvobject>
+</wave_config>
