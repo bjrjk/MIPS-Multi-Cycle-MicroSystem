@@ -44,6 +44,16 @@ module Decoder(
             `OPCODE_JAL: DecInstIndex=`CTLSIG_JAL;
             `OPCODE_LB: DecInstIndex=`CTLSIG_LB;
             `OPCODE_SB: DecInstIndex=`CTLSIG_SB;
+            `OPCODE_COP0: begin
+                if(funct==`FUNCT_ERET)
+                    DecInstIndex= (Inst[25] && Inst[24:6]==0)?(`CTLSIG_ERET):(`CTLSIG_NOP);
+                else if(rs==`COP0_MF)
+                    DecInstIndex= (Inst[10:3]==0)?(`CTLSIG_MFC0):(`CTLSIG_NOP);
+                else if(rs==`COP0_MT)
+                    DecInstIndex= (Inst[10:3]==0)?(`CTLSIG_MTC0):(`CTLSIG_NOP);
+                else 
+                    DecInstIndex=`CTLSIG_NOP;
+            end
             default: DecInstIndex=`CTLSIG_NOP;
         endcase
     end

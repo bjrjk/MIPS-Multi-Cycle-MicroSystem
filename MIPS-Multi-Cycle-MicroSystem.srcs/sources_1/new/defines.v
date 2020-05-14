@@ -2,6 +2,7 @@
 
 `include "defs/MIPSLite1.v"
 `include "defs/MIPSLite2.v"
+`include "defs/MIPSLite3.v"
 
 `define t 1'b1
 `define f 1'b0
@@ -34,6 +35,9 @@
 `define CTLSIG_JR 13
 `define CTLSIG_LB 14
 `define CTLSIG_SB 15
+`define CTLSIG_ERET 16
+`define CTLSIG_MFC0 17
+`define CTLSIG_MTC0 18
 
 //寄存器写目的控制信号宏定义
 `define REGWRDSTSIG_RT 0
@@ -48,6 +52,7 @@
 `define WRBACKSIG_ALU 0
 `define WRBACKSIG_MEM 1
 `define WRBACKSIG_PC 2
+`define WRBACKSIG_CP0 3
 
 //ALU数据源控制信号宏定义
 `define ALUSRCSIG_GPR 0
@@ -63,6 +68,7 @@
 `define STAGE_EXE 2
 `define STAGE_MEM 3
 `define STAGE_WB 4
+`define STAGE_INT 5
 
 //多周期CPU下地址逻辑控制信号宏定义
 `define NAFLSIG_PCNext 0
@@ -70,3 +76,5 @@
 `define NAFLSIG_J 2
 `define NAFLSIG_JAL 3
 `define NAFLSIG_JR 4
+`define NAFLSIG_INT 5
+`define NAFLSIG_EPC 6

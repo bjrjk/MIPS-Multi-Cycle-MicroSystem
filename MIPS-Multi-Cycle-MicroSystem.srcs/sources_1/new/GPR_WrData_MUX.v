@@ -4,7 +4,7 @@
 
 module GPR_WrData_MUX(
     input [1:0] WrBackCtl,
-    input [`QBBus] ALU,MEM,PC,
+    input [`QBBus] ALU,MEM,PC,CP0,
     output reg [`QBBus] out
     );
 
@@ -13,6 +13,7 @@ module GPR_WrData_MUX(
             `WRBACKSIG_ALU:out=ALU;
             `WRBACKSIG_MEM:out=MEM;
             `WRBACKSIG_PC:out=PC;
+            `WRBACKSIG_CP0:out=CP0;
             default:out=ALU;
         endcase
     end

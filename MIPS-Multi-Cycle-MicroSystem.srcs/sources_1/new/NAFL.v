@@ -10,7 +10,8 @@ module NAFL(
     input [`DBBus] beqShift, // beq指令，16比特左移两位后变18比特再符号拓展加到PC
     input [25:0] jPadding, // j和jal指令，26比特左移两位后变28比特置PC低位
     input [`QBBus] jrAddr, // jr指令从$ra直接读入的32位地址
-    output [`QBBus] nextInstAddr
+    output [`QBBus] nextInstAddr,
+    input [`QBBus] EPC
     );
 
     assign nextInstAddr = addr+4;
@@ -26,6 +27,8 @@ module NAFL(
         else if(NAFLCtl==`NAFLSIG_BEQ)nextAddr=addr;
         else if(NAFLCtl==`NAFLSIG_J||NAFLCtl==`NAFLSIG_JAL)nextAddr={addr[31:28],jPadding,2'b00};
         else if(NAFLCtl==`NAFLSIG_JR)nextAddr=jrAddr;
+        else if(NAFLCtl==`NAFLSIG_INT)nextAddr=32'h0000_4180;
+        else if(NAFLCtl==`NAFLSIG_EPC)nextAddr=EPC;
         else nextAddr=nextInstAddr;
     end
 

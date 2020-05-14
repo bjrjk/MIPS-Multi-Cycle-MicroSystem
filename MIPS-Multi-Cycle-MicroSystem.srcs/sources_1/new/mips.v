@@ -1,9 +1,14 @@
-//主模块
+//MIPS CPU 主模块
 
 `include "defines.v"
 
 module mips(
-    input clk,rst
+    input clk,rst,
+    output MIPS_WrEn,
+    output [`QBBus] MIPS_Addr,
+    input [`QBBus] Bridge_RD,
+    output [`QBBus] MIPS_DataOut,
+    input [5:0] Bridge_HWInt
     );
 
     //PC
@@ -24,6 +29,7 @@ module mips(
     wire [`DBBus] Decoder_imm;
     wire [25:0] Decoder_tgtAddr;
     wire [`QBBus] GPR_RdData1;
+    wire [`QBBus] CP0_EPCOut;
     NAFL insNAFL(
     .addr(PC_addr),
     .nextAddr(NAFL_nextAddr),
@@ -31,16 +37,17 @@ module mips(
     .beqShift(Decoder_imm),
     .jPadding(Decoder_tgtAddr),
     .jrAddr(GPR_RdData1),
-    .NAFLCtl(Controller_NAFLCtl)
+    .NAFLCtl(Controller_NAFLCtl),
+    .EPC(CP0_EPCOut)
     );
-    
+
     //IM
     wire [`QBBus] IM_Inst;
     wire Controller_IMEn;
-    im_1k insIM(
+    im_8k insIM(
     .clk(clk),
     .en(Controller_IMEn),
-    .addr(PC_addr[11:0]),
+    .addr(PC_addr),
     .dout(IM_Inst)
     );
 
@@ -62,7 +69,9 @@ module mips(
     wire [3:0] Controller_ALUCtl;
     wire [1:0] Controller_RegWrDstCtl,Controller_WrBackCtl;
     wire Controller_ALUSrcCtl, Controller_ExtCtl, Controller_DataSizeCtl;
-    Controller insController(
+    wire Controller_CP0WrEn,Controller_EPCWrEn,Controller_EXLSet,Controller_EXLClr;
+    wire CP0_interrupt;
+    Controller insController( 
     .clk(clk),
     .rst(rst),
     .DecInstBus(Decoder_DecInstBus),
@@ -77,7 +86,32 @@ module mips(
     .ALUSrcCtl(Controller_ALUSrcCtl), 
     .ExtCtl(Controller_ExtCtl),
     .DataSizeCtl(Controller_DataSizeCtl),
-    .NAFLCtl(Controller_NAFLCtl)
+    .NAFLCtl(Controller_NAFLCtl),
+    .CP0WrEn(Controller_CP0WrEn),
+    .EPCWrEn(Controller_EPCWrEn),
+    .EXLSet(Controller_EXLSet),
+    .EXLClr(Controller_EXLClr),
+    .interrupt(CP0_interrupt)
+    );
+
+    //协处理器CP0
+    wire [`QBBus] GPR_RdData2;
+    wire [`QBBus] CP0_DataOut;
+    wire [`QBBus] PCDelayOut_out;
+    CP0 insCP0(
+    .clk(clk),
+    .rst(rst),
+    .WrEn(Controller_CP0WrEn),
+    .addr(Decoder_rd),
+    .DataIn(GPR_RdData2),
+    .DataOut(CP0_DataOut),
+    .EPCWrEn(Controller_EPCWrEn),
+    .EPCIn(PCDelayOut_out), //EPC入总线，已更改，待仿真验证
+    .EPCOut(CP0_EPCOut), //EPC出总线
+    .HWInt(Bridge_HWInt),
+    .EXLSet(Controller_EXLSet),
+    .EXLClr(Controller_EXLClr), //置1 SR的EXL，清0 SR的EXL
+    .interrupt(CP0_interrupt) //CPU中断信号
     );
 
     //GPR_WrAddr_MUX
@@ -89,12 +123,19 @@ module mips(
     .out(GPR_WrAddr_MUX_out)
     );
 
-    //多周期CPU——处理JAL抢先回写寄存器
-    wire [`QBBus] JALOut_out;
-    QBBusReg insJALOut(
+    //多周期CPU——处理PC延迟回写寄存器——JAL和中断使用
+    QBBusReg insPCDelayOut(
     .clk(clk),
     .in(PC_addr),
-    .out(JALOut_out)
+    .out(PCDelayOut_out)
+    );
+
+    //微系统——处理MFC0延迟回写寄存器
+    wire [`QBBus] MFC0Out_out;
+    QBBusReg insMFC0Out(
+    .clk(clk),
+    .in(CP0_DataOut),
+    .out(MFC0Out_out)
     );
 
     //GPR_WrData_MUX
@@ -104,12 +145,12 @@ module mips(
     .WrBackCtl(Controller_WrBackCtl),
     .ALU(ALUOut_out),
     .MEM(DMReg_out),
-    .PC(JALOut_out),
+    .PC(PCDelayOut_out),
+    .CP0(MFC0Out_out),
     .out(GPR_WrData_MUX_out)
     );
 
     //GPR
-    wire [`QBBus] GPR_RdData2;
     wire ALU_OF;
     GPR insGPR(
     .clk(clk),
@@ -177,13 +218,17 @@ module mips(
 
     //DM
     wire [`QBBus] DM_dout;
-    dm_1k insDM(
-    .addr(ALUOut_out[11:0]),
+    dm_12k insDM(
+    .addr(ALUOut_out),
     .din(GPR_RdData2),
     .we(Controller_MemWrEn),
     .clk(clk),
     .dout(DM_dout),
-    .DataSizeCtl(Controller_DataSizeCtl)
+    .DataSizeCtl(Controller_DataSizeCtl),
+    .MIPS_WrEn(MIPS_WrEn),   //**注意检查从DM到系统桥再到各外设应该读没有时钟延迟，写只有一个：和读普通内存相同**
+    .MIPS_Addr(MIPS_Addr),
+    .Bridge_RD(Bridge_RD),
+    .MIPS_DataOut(MIPS_DataOut)
     );
 
     //Multi-Cycle Path Register DMReg
