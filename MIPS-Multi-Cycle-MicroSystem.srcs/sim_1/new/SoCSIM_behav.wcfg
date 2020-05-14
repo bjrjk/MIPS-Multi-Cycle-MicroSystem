@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="33914fs"></ZoomEndTime>
-      <Cursor1Time time="74000fs"></Cursor1Time>
+      <ZoomStartTime time="120000fs"></ZoomStartTime>
+      <ZoomEndTime time="153812fs"></ZoomEndTime>
+      <Cursor1Time time="141000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="218"></NameColumnWidth>
-      <ValueColumnWidth column_width="103"></ValueColumnWidth>
+      <ValueColumnWidth column_width="99"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="55" />
+   <WVObjectSize size="61" />
    <wvobject fp_name="/SIM/insSoC/insMIPs/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -239,5 +239,29 @@
    <wvobject fp_name="/SIM/insSoC/insMIPs/insIM/im" type="array">
       <obj_property name="ElementShortName">im[8191:0][7:0]</obj_property>
       <obj_property name="ObjectShortName">im[8191:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insController/StageIF" type="logic">
+      <obj_property name="ElementShortName">StageIF</obj_property>
+      <obj_property name="ObjectShortName">StageIF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insController/StageDCDRF" type="logic">
+      <obj_property name="ElementShortName">StageDCDRF</obj_property>
+      <obj_property name="ObjectShortName">StageDCDRF</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insController/StageEXE" type="logic">
+      <obj_property name="ElementShortName">StageEXE</obj_property>
+      <obj_property name="ObjectShortName">StageEXE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insController/StageMEM" type="logic">
+      <obj_property name="ElementShortName">StageMEM</obj_property>
+      <obj_property name="ObjectShortName">StageMEM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insController/StageWB" type="logic">
+      <obj_property name="ElementShortName">StageWB</obj_property>
+      <obj_property name="ObjectShortName">StageWB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insController/StageINT" type="logic">
+      <obj_property name="ElementShortName">StageINT</obj_property>
+      <obj_property name="ObjectShortName">StageINT</obj_property>
    </wvobject>
 </wave_config>

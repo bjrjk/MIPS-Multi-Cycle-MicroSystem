@@ -17,14 +17,15 @@ module dm_12k(
     output [`QBBus] MIPS_DataOut
     );
 
+
     wire InnerMemWrEn,IsBridgeAddr;
     assign IsBridgeAddr= (addr[31:8]==24'h0000_7F);
     assign MIPS_Addr=addr; //访问外设地址直接输出
     assign MIPS_DataOut=din; //外设写数据直接输出，对外设只实现LW/SW，不实现LB/SB
     assign MIPS_WrEn= we && IsBridgeAddr; //地址前缀为外设地址且有写使能时才向系统桥发使能
-    assign InnerMemWrEn= we && !MIPS_WrEn; //内部内存写使能
+    assign InnerMemWrEn= we && !IsBridgeAddr; //内部内存写使能
 
-    reg [`BBus] dm[12287:0];
+    reg [`BBus] dm[1023:0]; //12287，1024方便调试
     wire [15:0] index;
 
     assign index=addr[15:0];

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="SIM_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="SIM" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="5446970fs"></ZoomEndTime>
+      <Cursor1Time time="5000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="198"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/WrEn" type="logic">
+      <obj_property name="ElementShortName">WrEn</obj_property>
+      <obj_property name="ObjectShortName">WrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/addr" type="array">
+      <obj_property name="ElementShortName">addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/DataIn" type="array">
+      <obj_property name="ElementShortName">DataIn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DataIn[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/DataOut" type="array">
+      <obj_property name="ElementShortName">DataOut[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DataOut[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/EPCWrEn" type="logic">
+      <obj_property name="ElementShortName">EPCWrEn</obj_property>
+      <obj_property name="ObjectShortName">EPCWrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/EPCIn" type="array">
+      <obj_property name="ElementShortName">EPCIn[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EPCIn[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/EPCOut" type="array">
+      <obj_property name="ElementShortName">EPCOut[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EPCOut[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/HWInt" type="array">
+      <obj_property name="ElementShortName">HWInt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">HWInt[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/EXLSet" type="logic">
+      <obj_property name="ElementShortName">EXLSet</obj_property>
+      <obj_property name="ObjectShortName">EXLSet</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/EXLClr" type="logic">
+      <obj_property name="ElementShortName">EXLClr</obj_property>
+      <obj_property name="ObjectShortName">EXLClr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/interrupt" type="logic">
+      <obj_property name="ElementShortName">interrupt</obj_property>
+      <obj_property name="ObjectShortName">interrupt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/IM" type="array">
+      <obj_property name="ElementShortName">IM[5:0]</obj_property>
+      <obj_property name="ObjectShortName">IM[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/EXL" type="logic">
+      <obj_property name="ElementShortName">EXL</obj_property>
+      <obj_property name="ObjectShortName">EXL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/IE" type="logic">
+      <obj_property name="ElementShortName">IE</obj_property>
+      <obj_property name="ObjectShortName">IE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/SR" type="array">
+      <obj_property name="ElementShortName">SR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/EPC" type="array">
+      <obj_property name="ElementShortName">EPC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EPC[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/Cause" type="array">
+      <obj_property name="ElementShortName">Cause[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Cause[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/insCP0/PrID" type="array">
+      <obj_property name="ElementShortName">PrID[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PrID[31:0]</obj_property>
+   </wvobject>
+</wave_config>

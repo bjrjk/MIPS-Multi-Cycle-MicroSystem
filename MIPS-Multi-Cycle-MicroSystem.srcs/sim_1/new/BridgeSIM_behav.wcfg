@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="SIM_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="SIM" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="5295455fs"></ZoomEndTime>
+      <Cursor1Time time="5000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="218"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/SIM/insSoC/insBridge/WrEn" type="logic">
+      <obj_property name="ElementShortName">WrEn</obj_property>
+      <obj_property name="ObjectShortName">WrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insBridge/Addr" type="array">
+      <obj_property name="ElementShortName">Addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insBridge/WD" type="array">
+      <obj_property name="ElementShortName">WD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insBridge/RD" type="array">
+      <obj_property name="ElementShortName">RD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insBridge/HWInt" type="array">
+      <obj_property name="ElementShortName">HWInt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">HWInt[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insBridge/DEV1_WrEn" type="logic">
+      <obj_property name="ElementShortName">DEV1_WrEn</obj_property>
+      <obj_property name="ObjectShortName">DEV1_WrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insBridge/DEV3_WrEn" type="logic">
+      <obj_property name="ElementShortName">DEV3_WrEn</obj_property>
+      <obj_property name="ObjectShortName">DEV3_WrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insBridge/DEV_Addr" type="array">
+      <obj_property name="ElementShortName">DEV_Addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DEV_Addr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insBridge/DEV_WD" type="array">
+      <obj_property name="ElementShortName">DEV_WD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DEV_WD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insBridge/DEV1_RD" type="array">
+      <obj_property name="ElementShortName">DEV1_RD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DEV1_RD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insBridge/DEV2_RD" type="array">
+      <obj_property name="ElementShortName">DEV2_RD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DEV2_RD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insBridge/DEV1_interrupt" type="logic">
+      <obj_property name="ElementShortName">DEV1_interrupt</obj_property>
+      <obj_property name="ObjectShortName">DEV1_interrupt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insBridge/DEV1_RdEn" type="logic">
+      <obj_property name="ElementShortName">DEV1_RdEn</obj_property>
+      <obj_property name="ObjectShortName">DEV1_RdEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insBridge/DEV2_RdEn" type="logic">
+      <obj_property name="ElementShortName">DEV2_RdEn</obj_property>
+      <obj_property name="ObjectShortName">DEV2_RdEn</obj_property>
+   </wvobject>
+</wave_config>

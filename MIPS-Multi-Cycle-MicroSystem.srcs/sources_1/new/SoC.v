@@ -31,6 +31,7 @@ module SoC(
     wire [`QBBus] TimeCounter_DataOut; //从定时器和输入设备的输入数据；输出设备不留输入端口
     wire TimeCounter_interrupt; //定时器中断输入
     Bridge insBridge(
+    .clk(clk),
     .WrEn(MIPS_WrEn),
     .Addr(MIPS_Addr),
     .WD(MIPS_DataOut),

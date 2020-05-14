@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="SIM_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="SIM" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="5325758fs"></ZoomEndTime>
+      <Cursor1Time time="5000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="214"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/SIM/insSoC/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/OutDev_WrEn" type="logic">
+      <obj_property name="ElementShortName">OutDev_WrEn</obj_property>
+      <obj_property name="ObjectShortName">OutDev_WrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/OutDev_Data" type="array">
+      <obj_property name="ElementShortName">OutDev_Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OutDev_Data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/InDev_Data" type="array">
+      <obj_property name="ElementShortName">InDev_Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">InDev_Data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/MIPS_WrEn" type="logic">
+      <obj_property name="ElementShortName">MIPS_WrEn</obj_property>
+      <obj_property name="ObjectShortName">MIPS_WrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/MIPS_Addr" type="array">
+      <obj_property name="ElementShortName">MIPS_Addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MIPS_Addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/Bridge_RD" type="array">
+      <obj_property name="ElementShortName">Bridge_RD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Bridge_RD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/MIPS_DataOut" type="array">
+      <obj_property name="ElementShortName">MIPS_DataOut[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MIPS_DataOut[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/Bridge_HWInt" type="array">
+      <obj_property name="ElementShortName">Bridge_HWInt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">Bridge_HWInt[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/Bridge_DEV1_WrEn" type="logic">
+      <obj_property name="ElementShortName">Bridge_DEV1_WrEn</obj_property>
+      <obj_property name="ObjectShortName">Bridge_DEV1_WrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/Bridge_DEV_Addr" type="array">
+      <obj_property name="ElementShortName">Bridge_DEV_Addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Bridge_DEV_Addr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/Bridge_DEV_WD" type="array">
+      <obj_property name="ElementShortName">Bridge_DEV_WD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Bridge_DEV_WD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/TimeCounter_DataOut" type="array">
+      <obj_property name="ElementShortName">TimeCounter_DataOut[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TimeCounter_DataOut[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/TimeCounter_interrupt" type="logic">
+      <obj_property name="ElementShortName">TimeCounter_interrupt</obj_property>
+      <obj_property name="ObjectShortName">TimeCounter_interrupt</obj_property>
+   </wvobject>
+</wave_config>

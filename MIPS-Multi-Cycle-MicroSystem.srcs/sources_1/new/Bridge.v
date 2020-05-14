@@ -3,7 +3,7 @@
 `include "defines.v"
 
 module Bridge(
-    input WrEn,
+    input clk,WrEn,
     input [`QBBus] Addr,WD, //与CPU相连的总线
     output [`QBBus] RD,
     output [5:0] HWInt, //中断
