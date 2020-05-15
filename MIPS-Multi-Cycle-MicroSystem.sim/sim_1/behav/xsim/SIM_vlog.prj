@@ -15,8 +15,12 @@ verilog xil_defaultlib  \
 "../../../../MIPS-Multi-Cycle-MicroSystem.srcs/sources_1/new/controller.v" \
 "../../../../MIPS-Multi-Cycle-MicroSystem.srcs/sources_1/new/decoder.v" \
 "../../../../MIPS-Multi-Cycle-MicroSystem.srcs/sources_1/new/dm.v" \
+"../../../../MIPS-Multi-Cycle-MicroSystem.srcs/sources_1/new/frequencyDivider.v" \
 "../../../../MIPS-Multi-Cycle-MicroSystem.srcs/sources_1/new/im.v" \
+"../../../../MIPS-Multi-Cycle-MicroSystem.srcs/sources_1/new/main.v" \
 "../../../../MIPS-Multi-Cycle-MicroSystem.srcs/sources_1/new/mips.v" \
+"../../../../MIPS-Multi-Cycle-MicroSystem.srcs/sources_1/new/multiLED.v" \
+"../../../../MIPS-Multi-Cycle-MicroSystem.srcs/sources_1/new/singleLED.v" \
 "../../../../MIPS-Multi-Cycle-MicroSystem.srcs/sources_1/new/timeCounter.v" \
 "../../../../MIPS-Multi-Cycle-MicroSystem.srcs/sim_1/new/SIM.v" \
 

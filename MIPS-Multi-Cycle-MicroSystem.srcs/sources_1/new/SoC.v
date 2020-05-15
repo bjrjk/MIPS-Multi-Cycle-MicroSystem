@@ -48,7 +48,7 @@ module SoC(
     .DEV1_interrupt(TimeCounter_interrupt) //定时器中断输入
     );
 
-    assign OutDev_Data= OutDev_WrEn ? Bridge_DEV_WD : 32'hzzzzzzzz;
+    assign OutDev_Data= Bridge_DEV_WD;
 
     //定时器
     timeCounter insTimeCounter(
