@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="120000fs"></ZoomStartTime>
-      <ZoomEndTime time="153812fs"></ZoomEndTime>
-      <Cursor1Time time="141000fs"></Cursor1Time>
+      <ZoomStartTime time="2979650fs"></ZoomStartTime>
+      <ZoomEndTime time="3107751fs"></ZoomEndTime>
+      <Cursor1Time time="2986000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="218"></NameColumnWidth>
-      <ValueColumnWidth column_width="99"></ValueColumnWidth>
+      <ValueColumnWidth column_width="95"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="61" />
    <wvobject fp_name="/SIM/insSoC/insMIPs/clk" type="logic">
@@ -87,6 +87,10 @@
    <wvobject fp_name="/SIM/insSoC/insMIPs/CP0_EPCOut" type="array">
       <obj_property name="ElementShortName">CP0_EPCOut[31:0]</obj_property>
       <obj_property name="ObjectShortName">CP0_EPCOut[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SIM/insSoC/insMIPs/CP0_interrupt" type="logic">
+      <obj_property name="ElementShortName">CP0_interrupt</obj_property>
+      <obj_property name="ObjectShortName">CP0_interrupt</obj_property>
    </wvobject>
    <wvobject fp_name="/SIM/insSoC/insMIPs/insIM/index" type="array">
       <obj_property name="ElementShortName">index[15:0]</obj_property>
@@ -167,10 +171,6 @@
    <wvobject fp_name="/SIM/insSoC/insMIPs/Controller_EXLClr" type="logic">
       <obj_property name="ElementShortName">Controller_EXLClr</obj_property>
       <obj_property name="ObjectShortName">Controller_EXLClr</obj_property>
-   </wvobject>
-   <wvobject fp_name="/SIM/insSoC/insMIPs/CP0_interrupt" type="logic">
-      <obj_property name="ElementShortName">CP0_interrupt</obj_property>
-      <obj_property name="ObjectShortName">CP0_interrupt</obj_property>
    </wvobject>
    <wvobject fp_name="/SIM/insSoC/insMIPs/GPR_RdData2" type="array">
       <obj_property name="ElementShortName">GPR_RdData2[31:0]</obj_property>
