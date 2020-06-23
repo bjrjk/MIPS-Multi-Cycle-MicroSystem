@@ -28,6 +28,12 @@ module dm_12k(
     reg [`BBus] dm[1023:0]; //12287，1024方便调试
     wire [15:0] index;
 
+    integer i;
+
+    initial begin 
+        for(i=0;i<1024;i=i+1)dm[i]=0;
+    end
+
     assign index=addr[15:0];
     //Dout为小端序
     assign dout= (!IsBridgeAddr && DataSizeCtl==`DATASIZESIG_B) ? {{24{dm[index][7]}},dm[index]} :

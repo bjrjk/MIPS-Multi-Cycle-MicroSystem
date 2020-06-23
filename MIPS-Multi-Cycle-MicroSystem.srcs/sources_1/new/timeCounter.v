@@ -36,9 +36,9 @@ module timeCounter(
         end
     end
 
-    always@ (posedge clk or posedge rst) begin //计时功能
+    always@ (posedge clk or posedge rst) begin //计时功能，本课设使用模式0
         if(rst) COUNT<=0;
-        else if(!CTRL[0] && COUNT==0 && WrEn) begin
+        else if(!CTRL[0] && COUNT==0 && WrEn) begin //只有停止状态下才允许重新加载计数器
             COUNT<=DataIn;
         end else if(CTRL[0]) begin
             if(COUNT==0) begin

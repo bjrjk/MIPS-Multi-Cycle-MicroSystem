@@ -19,7 +19,12 @@ module ALU(
             `ALUSIG_SUB:C=A-B;
             `ALUSIG_OR:C=A|B;
             `ALUSIG_LUI:C={B[15:0],16'd0};
-            `ALUSIG_SLT:C=A<B;
+            `ALUSIG_SLT:C= (A[31]==0&&B[31]==0) ? (A<B) : //都为正数，直接比
+                            (A[31]==0&&B[31]==1) ? 0 : //A正B负，A肯定大于B
+                            (A[31]==1&&B[31]==0) ? 1 : //A负B正，A肯定小于B
+                            //(A[31]==1&&B[31]==1)，都为负数，化成绝对值后再比绝对值大的
+                            ((~A)+1) > ((~B)+1)
+                ;
             default:C=A+B;
         endcase
     end
